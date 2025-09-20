@@ -115,48 +115,55 @@
 </section>
 
 <script>
-    // ===== MENU HAMBURGUESA =====
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', () => {
+  // ===== MENU HAMBURGUESA =====
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
 
+  if(hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('active');
     });
-</script>
-<script>
-const form = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
+  }
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault(); // evita recarga de página
+  // ===== FORMULARIO =====
+  const form = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
 
-  const formData = {
-    name: form.name.value,
-    email: form.email.value,
-    message: form.message.value
-  };
+  if(form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-  try {
-    const res = await fetch('http://localhost:3000/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      };
+
+      try {
+        const res = await fetch('http://localhost:3000/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        const data = await res.json();
+
+        if(data.success){
+          formMessage.textContent = "¡Mensaje enviado correctamente!";
+          form.reset();
+        } else {
+          formMessage.textContent = "Error al enviar el mensaje, inténtalo de nuevo.";
+        }
+      } catch (err) {
+        formMessage.textContent = "Error al conectar con el servidor.";
+      }
     });
-
-    const data = await res.json();
-
-    if(data.success){
-      formMessage.textContent = "¡Mensaje enviado correctamente!";
-      form.reset();
-    } else {
-      formMessage.textContent = "Error al enviar el mensaje, inténtalo de nuevo.";
-    }
-  } catch (err) {
-    formMessage.textContent = "Error al conectar con el servidor.";
   }
 });
 </script>
+
 
 </body>
 </html>
