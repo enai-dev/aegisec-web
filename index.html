@@ -9,50 +9,7 @@
     <title>Aegisec | Auditorías Web Profesionales</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-    <script>
-    // ===== MENU HAMBURGUESA =====
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        navLinks.classList.toggle('active');
-    });
-</script>
-<script>
-const form = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault(); // evita recarga de página
-
-  const formData = {
-    name: form.name.value,
-    email: form.email.value,
-    message: form.message.value
-  };
-
-  try {
-    const res = await fetch('http://localhost:3000/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
-    });
-
-    const data = await res.json();
-
-    if(data.success){
-      formMessage.textContent = "¡Mensaje enviado correctamente!";
-      form.reset();
-    } else {
-      formMessage.textContent = "Error al enviar el mensaje, inténtalo de nuevo.";
-    }
-  } catch (err) {
-    formMessage.textContent = "Error al conectar con el servidor.";
-  }
-});
-</script>
+    
 <body>
 
 <!-- ===== HEADER ===== -->
@@ -155,6 +112,8 @@ form.addEventListener('submit', async (e) => {
 <p id="formMessage" style="margin-top:15px; color:#1abc9c;"></p>
 
 </section>
+    
+<script src="script1.js"></script>
 
 </body>
 </html>
