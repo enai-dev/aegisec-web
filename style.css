@@ -456,3 +456,8 @@ header .logo img {
   line-height: 1.6;
   color: #eee;
 }
+
+@media (max-width: 768px) {
+  .desktop-cta { display: none; }
+  .mobile-cta { display: block; }
+}
