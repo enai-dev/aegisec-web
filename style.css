@@ -569,7 +569,7 @@ header .logo img {
   /* HERO */
   .hero {
     padding: 40px 15px; /* antes seguro eran como 100px */
-    margin-bottom: 20px; /* reducimos espacio con la siguiente sección */
+    margin-bottom: 10px; /* reducimos espacio con la siguiente sección */
   }
 
   .hero h1 {
