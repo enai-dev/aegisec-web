@@ -540,7 +540,7 @@ header .logo img {
   
   .service-single {
     padding: 30px 20px;
-    margin: -40px 15px 30px 15px;
+    margin: -60px 15px 20px 15px;  /* ← MARGEN NEGATIVO MAYOR */
     border-radius: 15px;
   }
   
