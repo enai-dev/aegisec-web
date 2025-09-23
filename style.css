@@ -563,4 +563,37 @@ header .logo img {
     padding: 15px;
   }
 }
+/* ===== Ajustes específicos para móvil ===== */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    padding: 40px 15px; /* antes seguro eran como 100px */
+    margin-bottom: 20px; /* reducimos espacio con la siguiente sección */
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  /* CTA principal */
+  .cta-button {
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 0 auto; /* centrado */
+    display: inline-block;
+  }
+
+  /* ABOUT */
+  .about-modern {
+    padding: 40px 15px; /* menos espacio arriba y abajo */
+  }
+}
 
