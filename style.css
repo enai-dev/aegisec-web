@@ -1,11 +1,13 @@
 //* ===== VARIABLES Y RESET ===== */
 :root {
-  --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  --brand-500: #1abc9c;
-  --brand-dark: #0a0f1f;
-  --bg-soft: #f0f4f8;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+}
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 
