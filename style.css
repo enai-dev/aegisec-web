@@ -533,6 +533,7 @@ header .logo img {
   /* Services section */
   .services {
     padding: 60px 15px;
+    margin-bottom 80px;
   }
   
   .services h2 {
