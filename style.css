@@ -660,3 +660,15 @@ header .logo img {
     padding: 12px 15px;
   }
 }
+/* Asegurar que no hay espacios entre secciones */
+.hero + .services {
+  margin-top: 0;
+}
+
+.services + .about-modern {
+  margin-top: 0;
+}
+
+.about-modern + .who {
+  margin-top: 0;
+}
