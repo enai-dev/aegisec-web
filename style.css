@@ -97,7 +97,7 @@ header {
 }
 
 header .logo img {
-  height: 60px;
+  height: 80px;
   width: auto;
   display: block;
   animation: slideDownFade 1s ease forwards;
