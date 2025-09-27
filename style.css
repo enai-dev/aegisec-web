@@ -587,7 +587,7 @@ header .logo img {
   
   /* Quiénes somos section */
   .who {
-    padding: 60px 15px;
+    padding: 40px 15px 60px 15px;;
   }
   
   .who-header h2 {
