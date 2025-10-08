@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://aegisec.com/sitemap.xml
+Sitemap: https://aegisec.es/sitemap.xml
