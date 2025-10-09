@@ -251,7 +251,6 @@ header .logo img {
   margin: 0;
 }
 
-/* ===== SERVICES SECTION ===== */
 .services {
   background: #1d4e44;
   color: #fff;
@@ -265,9 +264,15 @@ header .logo img {
   color: #ffffff;
 }
 
+/* Contenedor para que los servicios se alineen en fila */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra los elementos */
+  gap: 30px; /* Espacio entre servicios */
+}
+
 .service-single {
-  max-width: 1000px;
-  margin: -80px auto 60px auto;
   background: #2c443b;
   color: #fff;
   padding: 50px 40px;
@@ -276,6 +281,8 @@ header .logo img {
   text-align: left;
   border-left: 6px solid #1abc9c;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  flex: 1 1 300px; /* Crece, se encoge, mínimo 300px */
+  max-width: 400px; /* Para no crecer demasiado */
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s forwards;
@@ -320,6 +327,7 @@ header .logo img {
   display: flex;
   gap: 20px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .service-cta-row .link-secondary {
@@ -327,6 +335,18 @@ header .logo img {
   text-decoration: underline;
   cursor: pointer;
   font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-single {
+    max-width: 90%;
+  }
 }
 
 /* ===== ABOUT SECTION ===== */
