@@ -23,14 +23,19 @@
 
 <main>
   <!-- Hero Scanner -->
-  <section class="hero scanner-hero">
-    <h1>Analiza la seguridad de tu web</h1>
-    <p>Introduce la URL de tu página y recibe un informe rápido con puntuación y recomendaciones de seguridad.</p>
-    <div class="scanner-form">
-      <input type="text" id="targetUrl" placeholder="https://tusitio.com">
-      <button id="scanBtn" class="cta-button">Analizar</button>
-    </div>
-  </section>
+<section class="scanner" id="scanner">
+  <h2>Scanner Aegisec</h2>
+  <p>Introduce la URL de tu web y obtén un análisis de seguridad rápida, con detección de vulnerabilidades y recomendaciones.</p>
+
+  <input type="url" id="scannerUrl" placeholder="https://tusitio.com" required>
+  <button id="scannerBtn">Analizar</button>
+
+  <div class="scanner-results" id="scannerResults" style="display:none;">
+    <h3>Resultados:</h3>
+    <ul id="scannerList"></ul>
+  </div>
+</section>
+
 
   <!-- Resultados -->
   <section class="services scanner-results">
@@ -41,6 +46,8 @@
   </section>
 </main>
 
+
+  
 <footer>
   <p>&copy; 2025 Aegisec | Auditorías Web Profesionales</p>
 </footer>
