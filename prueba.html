@@ -15,25 +15,26 @@
   <nav>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="scanner.html">Scanner</a></li>
+      <li><a href="scanner.html" class="active">Scanner</a></li>
       <li><a href="#contact">Contacto</a></li>
     </ul>
   </nav>
 </header>
 
-<main class="scanner-main">
-  <section class="scanner-hero">
-    <h1>Prueba la seguridad de tu web</h1>
-    <p>Introduce la URL de tu página y recibe un informe rápido de seguridad con puntuación y recomendaciones.</p>
-    
+<main>
+  <!-- Hero Scanner -->
+  <section class="hero scanner-hero">
+    <h1>Analiza la seguridad de tu web</h1>
+    <p>Introduce la URL de tu página y recibe un informe rápido con puntuación y recomendaciones de seguridad.</p>
     <div class="scanner-form">
       <input type="text" id="targetUrl" placeholder="https://tusitio.com">
-      <button id="scanBtn">Analizar</button>
+      <button id="scanBtn" class="cta-button">Analizar</button>
     </div>
   </section>
 
-  <section class="scanner-results">
-    <h2>Resultados</h2>
+  <!-- Resultados -->
+  <section class="services scanner-results">
+    <h2>Resultados del Escaneo</h2>
     <div id="results">
       <p>Introduce una URL y haz click en “Analizar” para ver los resultados.</p>
     </div>
