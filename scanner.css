@@ -1,3 +1,4 @@
+/* ===== BODY GENERAL ===== */
 body, html {
   margin: 0;
   padding: 0;
@@ -6,15 +7,53 @@ body, html {
   color: #fff;
 }
 
-/* ===== SCANNER ===== */
-.scanner {
-  background: linear-gradient(180deg, #0a0f1f 0%, #1d4e44 100%);
-  min-height: 100vh;
-  padding: 80px 20px;
+/* ===== HEADER ===== */
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px 50px;
+  background: rgba(10,15,31,0.95);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-links li a.active {
+  color: #1abc9c;
+}
+
+/* ===== SCANNER ===== */
+.scanner-main {
+  min-height: calc(100vh - 100px); /* Altura total menos header/footer */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #0a0f1f 0%, #1d4e44 100%);
+}
+
+.scanner {
   text-align: center;
+  max-width: 800px;
+  width: 100%;
 }
 
 .scanner h2 {
@@ -24,20 +63,18 @@ body, html {
 }
 
 .scanner p {
-  max-width: 700px;
   font-size: 1.2rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   line-height: 1.6;
 }
 
 .scanner input[type="url"] {
   width: 100%;
-  max-width: 500px;
-  padding: 15px;
+  padding: 14px;
+  font-size: 1rem;
   border-radius: 8px;
   border: none;
   margin-bottom: 20px;
-  font-size: 1rem;
 }
 
 .scanner button {
@@ -45,8 +82,8 @@ body, html {
   color: #fff;
   padding: 14px 35px;
   font-size: 1.1rem;
-  border: none;
   border-radius: 8px;
+  border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -57,10 +94,9 @@ body, html {
   box-shadow: 0 4px 12px rgba(26,188,156,0.4);
 }
 
+/* ===== RESULTADOS ===== */
 .scanner-results {
   margin-top: 40px;
-  width: 100%;
-  max-width: 800px;
   text-align: left;
   background: rgba(255,255,255,0.05);
   padding: 20px;
@@ -79,15 +115,23 @@ body, html {
 }
 
 .scanner-results ul li {
-  margin-bottom: 12px;
-  padding-left: 25px;
   position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
 }
 
 .scanner-results ul li::before {
   content: "🔹";
   position: absolute;
   left: 0;
-  top: 0;
   color: #1abc9c;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 25px;
+  text-align: center;
+  background: rgba(10,15,31,0.95);
+  color: #fff;
+  font-size: 0.9rem;
 }
