@@ -24,6 +24,7 @@
             <li><a href="#services">Nuestro Servicio</a></li>
             <li><a href="#about">Sobre Nosotros</a></li>
             <li><a href="#contact">Contacto</a></li>
+            <li><a href="prueba.html">Prueba Aegisec</a></li> <!-- Enlace añadido -->
         </ul>
     </nav>
 
@@ -76,11 +77,28 @@
   </div>
 </section>
 
-
 <!-- ===== SERVICIO ===== -->
 <section class="services" id="services">
     <h2>Nuestro Servicio</h2>
 
+    <!-- Prueba Aegisec -->
+    <div class="service-single">
+        <h3>Prueba Aegisec (Scanner Gratuito)</h3>
+        <p>Introduce tu dominio y obtén una puntuación de seguridad automática para tu web. Descubre en segundos si tu sitio tiene riesgos y cómo mejorar.</p>
+        <div class="service-details">
+            <ul>
+                <li>Puntuación Aegisec de 0 a 10</li>
+                <li>Nivel de riesgo: Crítico, Alto, Medio o Bajo</li>
+                <li>Informe rápido con hallazgos básicos</li>
+                <li>Ideal para conocer vulnerabilidades sin compromiso</li>
+            </ul>
+        </div>
+        <div class="service-cta-row">
+            <a href="prueba.html" class="cta-button">Probar Gratis</a>
+        </div>
+    </div>
+
+    <!-- Auditoría Web Completa -->
     <div class="service-single">
         <h3>Auditoría Web Completa</h3>
         <p>Con nuestra auditoría, descubrirás vulnerabilidades en tu web y obtendrás soluciones claras para proteger tu negocio y tus clientes.</p>
@@ -97,20 +115,37 @@
             <span class="link-secondary">Más información</span>
         </div>
     </div>
+
+    <!-- Certificado Aegisec -->
+    <div class="service-single">
+        <h3>Certificado Aegisec</h3>
+        <p>Demuestra que tu web es segura ante clientes, partners e inversores. Solo disponible para webs que superen la puntuación mínima de seguridad.</p>
+        <div class="service-details">
+            <ul>
+                <li>Disponible tras contratar Auditoría Completa (1 año gratis)</li>
+                <li>También opcional para webs con puntuación perfecta (10)</li>
+                <li>Incluye PDF oficial y sello digital para tu web</li>
+                <li>Validez de 12 meses con verificación de dominio</li>
+            </ul>
+        </div>
+        <div class="service-cta-row">
+            <a href="#contact" class="cta-button">Solicitar Certificado</a>
+        </div>
+    </div>
+
 </section>
 
 <!-- ===== CONTACT ===== -->
 <section class="contact" id="contact">
     <h2>Contacto</h2>
     <form id="contactForm" class="contact-form">
-  <input type="text" name="name" placeholder="Tu nombre" required>
-  <input type="email" name="email" placeholder="Tu correo" required>
-  <textarea name="message" placeholder="Tu mensaje" required></textarea>
-  <button type="submit" class="cta-button">Enviar</button>
-</form>
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+        <button type="submit" class="cta-button">Enviar</button>
+    </form>
 
-<p id="formMessage" style="margin-top:15px; color:#1abc9c;"></p>
-
+    <p id="formMessage" style="margin-top:15px; color:#1abc9c;"></p>
 </section>
 
 <script>
@@ -162,7 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
-
 
 </body>
 </html>
